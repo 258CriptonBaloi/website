@@ -27,52 +27,121 @@ body{
 header{
     background-color: var(--cor001);
     color: white;
+    font-family: var(--fonte-menus);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
 
-h1{
-    font-family: var(--fonte-portfolio);
+@media screen and (max-width: 768px){
+    .menu_nav{
+        position: fixed;
+        top: 3rem;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        padding: 2rem;
+        background-color: var(--cor003);
+        transition: .5s;
+    }
 }
 
-nav > a{
-    text-decoration: none;
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.itens_menu{
+    margin-bottom: 2rem;
+}
+
+.links_menu{
+    position: relative;
     color: white;
-    padding: 10px;
-    font-family: var(--fonte-menus);
-    font-size: 20px;
+    text-decoration: none;
+}
+
+.links_menu:hover{
+    position: relative;
+}
+
+.links_menu:hover::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: var(--cor001);
+}
+
+.activo::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: var(--cor001);
+    
+}
+
+h1{
+    font-family: var(--fonte-portfolio);
+    font-size: 1.5rem;
+    font-style: italic;
 }
 
 main{
-    background-color: var(--cor003);
-    padding: 10px;
-    margin: auto;
-    max-width: 300px;
-    min-width: 1100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-main>p{
-    background-color: white;
-    height: 200px;
-    width: 200px;
-    margin: 5px;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-footer{
     color: white;
-    background-color: black;
-    text-align: center;
-    font-family: var(--fonte-conteudo);
-    font-size: 20px;
+    background-color: var(--cor003);
+    font-size: 16px;
+    margin: auto;
+    min-width: 300px;
+    max-width: 1100px;
+    margin-bottom: 20px;
     padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: var(--fonte-conteudo);
+}
+
+.dados_skill{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 4px 25px rgba(14,36,49,.15);
+}
+
+.skill_icon{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--cor001);
+}
+
+.nomes_skills{
+    display: flex;
+    align-items: center;
+}
+
+.skill_bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--cor001);
+    height: .25rem;
+    border-radius: .5rem;
+    z-index: -10;
+}
+
+.skill_html{
+    width: 70%;
 }
 
