@@ -7,28 +7,69 @@
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <title>Cripton Baloi</title>
     <link rel="stylesheet" href="../css/contacto.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
-        <h1>Cripton</h1>
+        <div>
+            <h1>Cripton</h1>  
+        </div>
 
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="sobremim.html">Sobre mim</a>
-            <a href="skills.html">Skills</a>
-            <a href="portfolio.html">Portfólio</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+        <div id="nav_menu">
+            <nav class="menu_nav">
+                <ul>
+                    <li class="itens_menu"><a class="links_menu" href="../index.html">Home</a></li>
+                    <li class="itens_menu"><a class="links_menu" href="sobremim.html">Sobre mim</a></li>
+                    <li class="itens_menu"><a class="links_menu" href="skills.html">Skills</a></li> 
+                    <li class="itens_menu"><a class="links_menu" href="portfolio.html">Portfólio</a></li>
+                    <li class="itens_menu"><a class="links_menu activo" href="#">Contacto</a></li>
+                </ul>
+
+            </nav>   
+        </div>
+
+        <div class="menu_mobile" id="menu_toogle">
+            <i class='bx bx-menu'></i>
+        </div>
 
     </header>
 
     <main>
+        <div>
+            <form action="">
+                <input type="text" placeholder="Nome" class="contacto_input">
+                <input type="mail" placeholder="E-mail" class="contacto_input">
+                <textarea name="" id="" cols="0" rows="10" placeholder="Mensagem" class="contacto_input"></textarea>
+                <input type="button" value="Enviar" class="butao_enviar button">
+            </form>
+        </div>
+
+        <div>
+            <p><i class='bx bx-map icone_contacto'></i> Bairro das Mahotas, Maputo, Moçambique</p>
+            <p><i class='bx bxs-phone icone_contacto'></i> (+258) 84 659 4586/ 87 144 5891</p>
+            <p><i class='bx bxl-gmail icone_contacto'></i><a href="maito:criptonbaloi9@gmail.com" class="link_email"> criptonbaloi9@gmail.com</a></p> 
+        </div>    
 
     </main>
 
     <footer>
-        <p>Copyrigth Cripton Baloi made width love</p>
+
+        <p class="meu_nome">Cripton Baloi</p>
+
+        <div class="icone_redes">
+            <a href="https://api.whatsapp.com/send?phone=258846594587&text=Ol%C3%A1,%20dev" target="_blank" class="icones_redes_sociais"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://instagram.com/cripton_baloi?utm_medium=copy_link" target="_blank" class="icones_redes_sociais"><i class='bx bxl-instagram'></i></a>
+            <a href="mailto:criptonbaloi9@gmail.com" class="icones_redes_sociais"><i class='bx bx-envelope' ></i></a>
+            <a href="https://github.com/258CriptonBaloi" target="_blank" class="icones_redes_sociais"><i class='bx bxl-github' ></i></a>
+        </div>
+
+        <p class="copy_right">&#169;Copyrigth made with love</p>
+
     </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="javascript/main.js"></script>
     
 </body>
 </html>
