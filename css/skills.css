@@ -88,6 +88,12 @@ ul{
     
 }
 
+.menu_mobile{
+    cursor: pointer;
+    width: max-content;
+    font-size: 2rem;
+}
+
 h1{
     font-family: var(--fonte-portfolio);
     font-size: 1.5rem;

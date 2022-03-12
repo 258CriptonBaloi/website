@@ -97,6 +97,12 @@ ul{
     
 }
 
+.menu_mobile{
+    cursor: pointer;
+    width: max-content;
+    font-size: 2rem;
+}
+
 main{
   color: white;
   background-color: var(--cor003);

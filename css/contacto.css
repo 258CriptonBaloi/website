@@ -118,14 +118,14 @@ main{
 }
 
 .contacto_input{
-    width: 100%;
+    width: 90%;
     font-family: var(--fonte-conteudo);
     font-size: 1.1rem;
     padding: 1rem;
     border-radius: 1rem;
     border: 1.5px solid var(--cor004);
     outline: none;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
 }
 
 .butao_enviar{
@@ -133,13 +133,13 @@ main{
     cursor: pointer;
     margin-right: auto;
     background-color: var(--cor001);
-    width: 90px;
+    width: 120px;
     margin-bottom: 1rem;
     color: white;
-    padding: 15px 0;
+    padding: 10px 0;
     font-size: 18px;
     font-weight: 600;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .icone_contacto{
