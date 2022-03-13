@@ -1,11 +1,46 @@
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+class MobileNavbar{
+    constructor(mobileMenu,navList,navLinks){
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navList = document.querySelector(navList);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.activeClass = "active";
 
-    if(toogle && nav){
-        toogle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    animateLinks(){
+        this.navLinks.forEach((link, index) =>{
+        console.log(index);
+        link.style.animation
+        ?(link.style.animation = "")
+        :(link.style.animation = 'navLinkFade 0.5s ease forward 0.3s');
+        });
+    }
+
+
+    handleClick(){
+        this.navList.classList.toggle(this.activeClass);
+        this.mobileMenu.classList.toggle(this.activeClass);
+        this.animateLinks();
+    }
+
+    addClickEvent(){
+        this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+
+    init(){
+        if(this.mobileMenu){
+            this.addClickEvent();
+
+        }
+        return this;
     }
 }
-showMenu('menu_toogle','nav_menu')
+
+const mobileNavbar = new MobileNavbar(
+    ".mobile_menu",
+    ".nav_list",
+    ".nav_list li",
+);
+
+mobileNavbar.init();
