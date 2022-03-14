@@ -60,8 +60,9 @@ nav{
 
 }
 
-.nav_list.active{
-    transform: translateX(0);
+.mobile_menu{
+    display: block;
+    cursor: pointer;
 }
 
 .mobile_menu div{
@@ -69,11 +70,7 @@ nav{
     height: 2px;
     background: white;
     margin: 8px;
-}
-
-.mobile_menu{
-    display: block;
-    cursor: pointer;
+    transition: 0.3s;
 }
 
 @media (max-width: 768px){
@@ -86,15 +83,45 @@ nav{
         top: 8vh;
         right: 0;
         width: 50vw;
-        height: 100%;
+        height: 92vh;
         background-color: var(--cor01);
         flex-direction: column;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
+    }
 
+    .mobile_menu{
+        display: block;
+    }
+
+}
+
+.nav_list.active{
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
+.mobile_menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile_menu.active .line2{
+    opacity: 0;    
+}
+
+.mobile_menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);   
+}
 .itens_menu{
     margin-top: 2rem;
 }
@@ -128,29 +155,6 @@ nav{
     top: 2rem;
     background-color: var(--cor04);
     
-}
-
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.mobile_menu.active .line1{
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile_menu.active .line2{
-    opacity: 0;    
-}
-
-.mobile_menu.active .line3{
-    transform: rotate(45deg) translate(-5px, -7px);   
 }
 
 h1{
