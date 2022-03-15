@@ -83,7 +83,7 @@ nav{
         top: 8vh;
         right: 0;
         width: 50vw;
-        height: 92vh;
+        height: 50vh;
         background-color: var(--cor01);
         flex-direction: column;
         transform: translateX(0);

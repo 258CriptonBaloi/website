@@ -62,7 +62,7 @@ nav{
 }
 
 .nav_list.active{
-    transform: translateX(0);
+    transform: translateX(100%);
 }
 
 .mobile_menu div{
@@ -87,10 +87,10 @@ nav{
         top: 8vh;
         right: 0;
         width: 50vw;
-        height: 100%;
+        height: 50vh;
         background-color: var(--cor001);
         flex-direction: column;
-        transform: translateX(100%);
+        transform: translateX(0);
         transition: transform 0.3s ease-in;
 
     }
