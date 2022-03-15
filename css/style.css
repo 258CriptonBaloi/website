@@ -86,7 +86,7 @@ nav{
         height: 92vh;
         background-color: var(--cor01);
         flex-direction: column;
-        transform: translateX(100%);
+        transform: translateX(0);
         transition: transform 0.3s ease-in;
     }
 
@@ -97,7 +97,7 @@ nav{
 }
 
 .nav_list.active{
-    transform: translateX(0);
+    transform: translateX(100%);
 }
 
 @keyframes navLinkFade{
