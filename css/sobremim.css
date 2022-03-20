@@ -75,6 +75,8 @@ nav{
 .mobile_menu{
     display: block;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 @media (max-width: 768px){
@@ -92,7 +94,7 @@ nav{
         flex-direction: column;
         transform: translateX(0);
         transition: transform 0.3s ease-in;
-
+        border-bottom-left-radius: 10px;
     }
 }
 
@@ -190,6 +192,11 @@ main >p{
 p > a{
    color: white;
    font-size: 18px; 
+}
+
+.documento_icon{
+    color: var(--cor001);
+    font-size: 1.8rem;
 }
 
 .link_externo{

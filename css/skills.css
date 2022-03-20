@@ -76,6 +76,8 @@ nav{
 .mobile_menu{
     display: block;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 @media (max-width: 768px){
@@ -93,6 +95,7 @@ nav{
         flex-direction: column;
         transform: translateX(0);
         transition: transform 0.3s ease-in;
+        border-bottom-left-radius: 10px;
 
     }
 }
